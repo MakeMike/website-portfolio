@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+
+:root {
+    --main-text: #cbd5e0;
+    --main-header-font: "Open Sans", sans-serif;
+    --main-header-font-size: 25px;
+    --main-paragraph-font: "Roboto Mono", monospace;
+    --main-paragraph-font-size: 16px;
+    --item-font: "Raleway", sans-serif;
+    --item-font-size: 20px;
+    --secondary-color: #2d3748;
+    --main-colour: #1a202c;
+}
+html {
+    color: var(--main-text, #cbd5e0);
+    background-color: var(--main-colour, #1a202c);
+}
+body {
+    margin: auto;
+    max-width: 1000px;
+}
+
+.header,
+.subheader {
+    font-family: var(--main-header-font, sans-serif);
+}
+.par {
+    font-family: var(--main-paragraph-font, monospace);
+}
+
+.nav-line {
+    border: none;
+    height: 1px;
+    animation: openup 2s;
+    animation-timing-function: ease-in-out;
+    background-color: var(--secondary-color, #2d3748);
+}
+.main {
+    margin: 20px;
+}
+.item {
+    list-style-type: none;
+}
+.item-link {
+    color: inherit;
+    text-decoration: inherit;
+    margin: 5px;
+    font-family: var(--item-font, sans-serif);
+    font-size: var(--item-font-size);
+}
+.nav-ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.active {
+    color: var(--secondary-color, #2d3748);
+}
+.content {
+    margin-top: 100px;
+}
+.sub {
+    margin-bottom: 100px;
+}
+.subheader {
+    font-size: var(--main-header-font-size);
+}
+.wr {
+    font-size: var(--main-paragraph-font-size);
+    font-family: var(--main-paragraph-font);
+}
+@keyframes openup {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    :root{
+        --item-font-size: 25px;
+    }
+}
